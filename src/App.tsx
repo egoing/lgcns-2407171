@@ -3,18 +3,14 @@ import "./App.css";
 
 function Counter({ title, initValue }: { title: string; initValue: number }) {
     const [count, setCount] = useState(initValue);
-    // function handleClick() {
-    //     setCount(count + 1);
-    // }
-
-    // const handleClick = () => {
-    //     setCount(count + 1);
-    // };
-
     const handleClick = () => setCount(count + 1);
-
+    const css = {
+        border: "5px solid black",
+        backgroundColor: "gray",
+        padding: "10px",
+    };
     return (
-        <div>
+        <div style={css}>
             <h1>{title}</h1>
             <button onClick={handleClick}>+</button> {count}
         </div>
