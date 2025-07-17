@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "./App.css";
+import s from "./App.module.css";
+console.log("🚀 ~ s:", s.btn);
 
 function Counter({ title, initValue }: { title: string; initValue: number }) {
     const [count, setCount] = useState(initValue);
@@ -12,7 +14,10 @@ function Counter({ title, initValue }: { title: string; initValue: number }) {
     return (
         <div style={css}>
             <h1>{title}</h1>
-            <button onClick={handleClick}>+</button> {count}
+            <button className={s.btn} onClick={handleClick}>
+                +
+            </button>{" "}
+            {count}
         </div>
     );
 }
