@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import s from "./App.module.css";
-import { Button } from "@mui/material";
+import { Button, Container } from "@mui/material";
 console.log("🚀 ~ s:", s.btn);
 
 function Counter({ title, initValue }: { title: string; initValue: number }) {
@@ -25,9 +25,9 @@ function Counter({ title, initValue }: { title: string; initValue: number }) {
 
 function App() {
     return (
-        <>
+        <Container maxWidth="sm">
             <Counter title="Counter 1" initValue={10} />
-        </>
+        </Container>
     );
 }
 
