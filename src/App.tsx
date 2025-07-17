@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import s from "./App.module.css";
+import { Button } from "@mui/material";
 console.log("🚀 ~ s:", s.btn);
 
 function Counter({ title, initValue }: { title: string; initValue: number }) {
@@ -14,9 +15,9 @@ function Counter({ title, initValue }: { title: string; initValue: number }) {
     return (
         <div style={css}>
             <h1>{title}</h1>
-            <button className={s.btn} onClick={handleClick}>
+            <Button variant="contained" size="small" onClick={handleClick}>
                 +
-            </button>{" "}
+            </Button>{" "}
             {count}
         </div>
     );
